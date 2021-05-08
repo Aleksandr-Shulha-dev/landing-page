@@ -63,6 +63,11 @@
         font-size: 1.8rem;
         line-height: 2.8rem;
         margin-bottom: 4.5rem;
+        color: $description-txt-color;
+
+        &--darken {
+            color: $plan-description-color;
+        }
     }
 }
 
@@ -148,10 +153,10 @@
     text-transform: uppercase;
     line-height: 2.1rem;
     margin-bottom: 1.5rem;
-    color: $secondary-txt-color;
+    color: $description-txt-color;
 }
 
-.services__content {
+.services__content, .features__content, .plan__content {
     width: 100%;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -159,15 +164,10 @@
 
 .services__block {
     flex-basis: 36rem;
-    height: 35rem;
-    padding: 4rem;
-    border: 1px solid $hr-color;
-    border-radius: 10px;
-    margin-top: 3rem;
+    @extend %content__block;
 }
 
 .services__img {
-
     width: 65px;
     height: 65px;
     border: 1px solid $hr-color;
@@ -185,5 +185,114 @@
     line-height: 2.8rem;
     margin-bottom: 3rem;
 }
+
+.learn-more {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.features__block {
+    flex-basis: 55.5rem;
+    height: 48rem;
+    padding-bottom: 6rem;
+    @extend %content__block;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.features__description {
+    font-size: 3.6rem;
+    line-height: 4.2rem;
+    letter-spacing: 0.2px;
+    color: $white-color;
+}
+
+.features__first {
+    background-image: url('../img/features1.png');
+}
+
+.features__second {
+    background-image: url('../img/features2.png');
+}
+
+.plan__block {
+    padding: 3.5rem;
+    padding-bottom: 5rem;
+    margin-top: 4rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    flex-basis: 36rem;
+    text-align: center;
+    background: $white-color;
+    box-shadow: 0px 10px 35px rgba($black-color, 0.03);
+    transition: all 0.2s;
+
+    &:hover {
+        box-shadow: 0px 10px 35px rgba($black-color, 0.1);
+    }
+}
+
+.plan__title {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    letter-spacing: 0.2px;
+    margin-bottom: 3rem;
+}
+
+.plan__price {
+    font-size: 4rem;
+    line-height: 5.2rem;
+    letter-spacing: 0.2px;
+    margin-bottom: 0.5rem;
+
+    &--started {
+        color: $inverse-color;
+    }
+
+    &--medium {
+        color: $medium-plan-color;
+    }
+
+    &--advanced {
+        color: $advanced-plan-color;
+    }
+}
+
+.plan__period {
+    display: block;
+    color: $plan-description-color;
+    margin-bottom: 3.5rem;
+}
+
+.plan__description {
+    line-height: 2.8rem;
+    margin-bottom: 5rem;
+    color: $description-txt-color;
+}
+
+.plan__btn {
+    @include btn($accent-color, $white-color, 20px, $accent-color);
+    font-weight: 400;
+
+    &:hover {
+        @include btn($white-color, $accent-color, 20px, $accent-color);
+        font-weight: 400;
+    }
+}
+
+.started {
+    border-top: 3px solid $inverse-color;
+}
+
+.medium {
+    border-top: 3px solid $medium-plan-color;
+}
+
+.advanced {
+    border-top: 3px solid $advanced-plan-color;
+}
+
+
+
 
 @import "media";
