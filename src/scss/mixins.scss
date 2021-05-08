@@ -1,0 +1,25 @@
+@mixin flex($justify, $aligh, $direction: row) {
+    display: flex;
+    @if($direction != row) {
+        flex-direction: $direction;
+    }
+    justify-content: $justify;
+    align-items: $aligh;
+
+}
+
+@mixin btn($primery, $bg-color, $bd-rds, $bd-color) {
+    min-width: 120px;
+    padding: 1rem 3.5rem;
+    border: 2px solid $bd-color;
+    border-radius: $bd-rds;
+    background-color: $bg-color;
+    color: $primery;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+        box-shadow: 4px 4px 5px rgba($black-color, 0.4);
+    }
+}

@@ -1,0 +1,35 @@
+@import "fonts";
+@import "mixins";
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: $accent-color;
+}
+
+h1, h2 {
+    font-family: 'Nuino Sans', sans-serif;
+}
+
+section, main, header {
+    width: 100%;
+}
+
+.container {
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 3rem 30px;
+    height: inherit;
+}
+
+.flex {
+    display: flex;
+}
+
+
+
