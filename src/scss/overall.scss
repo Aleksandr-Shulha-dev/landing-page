@@ -16,8 +16,12 @@ h1, h2 {
     font-family: 'Nuino Sans', sans-serif;
 }
 
-section, main, header {
+section, main, header, footer {
     width: 100%;
+}
+
+section {
+    background-color: $white-color;
 }
 
 .container {

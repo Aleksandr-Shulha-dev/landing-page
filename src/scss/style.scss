@@ -292,7 +292,145 @@
     border-top: 3px solid $advanced-plan-color;
 }
 
+.ads {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 
+    &__content {
+        width: 100%;
+        height: 38rem;
+        padding-top: 9.7rem;
+        padding-bottom: 8.5rem;
+        border-radius: 16px;
+        text-align: center;
+        background-image: url('../img/ads-bg.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    &__title {
+        color: $white-color;
+        font-size: 4rem;
+        letter-spacing: 0.2px;
+        line-height: 5.2rem;
+        font-weight: 400;
+        margin-bottom: 2rem;
+    }
+
+    &__description {
+        font-size: 1.8rem;
+        color: rgba($white-color, 0.6);
+        line-height: 3.2rem;
+        margin-bottom: 4.8rem;
+    }
+
+    &__btn {
+        @include btn($white-color, transparent, 20px, $white-color);
+        font-weight: 400;
+        margin-left: 2rem;
+
+        &--accent {
+            @include btn($secondary-txt-color, $white-color, 20px, $white-color);
+            font-weight: 400;
+        }
+    }
+}
+
+.footer {
+    background-color: $accent-color;
+    padding-top: 9rem;
+    padding-bottom: 7rem;
+    color: $hr-color;
+    text-align: center;
+
+    &__content {
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    &__nav {
+        width: 195px;
+
+        &:nth-child(2) {
+            margin-left: auto;
+        }
+    }
+
+    &__title {
+        font-size: 1.7rem;
+        font-weight: 400;
+        line-height: 2.4rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 3.8rem;
+    }
+
+    &__item + &__item {
+        margin-top: 2rem;
+    }
+
+    &__link {
+        font-size: 1.5rem;
+    }
+}
+
+.about-us {
+    width: 28.5rem;
+
+    &__description {
+        margin-top: 2.8rem;
+        margin-bottom: 5.8rem;
+        line-height: 2.8rem;
+    }
+}
+
+.social__item {
+    width: 38px;
+    height: 38px;
+    border-radius: 5px;
+    background-color: $hr-color;
+    @include flex(center, center);
+
+    & + & {
+        margin-left: 8px;
+    }
+}
+
+.contact-us {
+    width: 220px;
+
+    &__mail {
+        display: block;
+        color: $white-color;
+        font-size: 2.5rem;
+        margin-top: 2rem;
+        margin-bottom: 2.8rem;
+    }
+}
+
+.partners {
+    align-items: center;
+}
+
+.gdpr {
+    display: block;
+    width: 106px;
+    height: 41px;
+    background-image: url('../img/gdpr.png');
+}
+
+.trustpilot {
+    display: block;
+    width: 100px;
+    height: 25px;
+    background-image: url('../img/trustpilot.svg');
+    margin-left: 2rem;
+}
+
+.copyright {
+    margin-top: 14rem;
+    line-height: 2.8rem;
+}
 
 
 @import "media";
