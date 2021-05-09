@@ -16,8 +16,12 @@ h1, h2 {
     font-family: 'Nuino Sans', sans-serif;
 }
 
-section, main, header {
+section, main, header, footer {
     width: 100%;
+}
+
+section {
+    background-color: $white-color;
 }
 
 .container {
@@ -31,5 +35,13 @@ section, main, header {
     display: flex;
 }
 
+%content__block {
+    padding: 4rem;
+    border: 1px solid $hr-color;
+    border-radius: 10px;
+    margin-top: 3rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
 
 
