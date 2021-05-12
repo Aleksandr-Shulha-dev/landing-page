@@ -1,3 +1,15 @@
+// MENU
+
+const burgerMenu = document.querySelector('.burger');
+const nav = document.querySelector('.nav');
+
+burgerMenu.addEventListener('click', () => {
+    burgerMenu.classList.toggle('burger--active');
+    nav.classList.toggle('nav__mobile--active');
+})
+
+
+
 // SLIDER
 
 const prev = document.querySelector('.slider__btn--left');
